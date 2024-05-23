@@ -1,0 +1,21 @@
+{%include 'adminheader.html'%}
+<center>
+    
+<table   class="table table-stripped" align="center" style="color: white; width:50%; margin-top:100px" border="1">
+    <tr style="background-color: white; color:black">
+        <th>User-Name</th>
+        <th>Feedback</th>
+        <th>Date</th>
+    </tr>
+    {%for i in feed%}
+    <tr><th>
+        {{i.user.name}}
+        <th>{{i.feedback}}</th>
+        <th>{{i.date}}</th>
+    </th></tr>
+    {%endfor%}
+</table>
+</center>
+
+
+{%include 'footer.html'%}

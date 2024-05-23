@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_custom_view_media.xml" value="0.2" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_custome_travelogue.xml" value="0.22826086956521738" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_manage_audio_video.xml" value="0.22826086956521738" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_manage_travelogue.xml" value="0.22826086956521738" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_send_feedback.xml" value="0.10989583333333333" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_send_review.xml" value="0.22826086956521738" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_user_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/RISS EKM/PROJECT/smart travelogue/smart_Travel_android/app/src/main/res/layout/activity_view_travelogue.xml" value="0.22826086956521738" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

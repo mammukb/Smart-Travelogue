@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backee"
+    tools:context=".User_home">
+
+
+    <Button
+        android:id="@+id/Viewplaces"
+        android:layout_width="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_height="wrap_content"
+        android:text="PLACES" />
+
+<!--    <Button-->
+<!--        android:id="@+id/manage_audio_video"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="MEDIA" />-->
+    <Button
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SERVICES" />
+
+    <Button
+        android:id="@+id/view_noti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOTIFICATIONS" />
+
+    <Button
+        android:id="@+id/ds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PACKAGES" />
+    <Button
+        android:id="@+id/nby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEAR BY FACILITIES" />
+    <Button
+        android:id="@+id/nerbyplc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEAR BY PLACES" />
+    <Button
+        android:id="@+id/addtravelogue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD TRAVELOGUE" />
+
+
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OTHERS TRAVELOGUE" />
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Media" />
+
+    <Button
+        android:id="@+id/fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FEEDBACK" />
+    <Button
+        android:id="@+id/logut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGOUT" />
+</LinearLayout>

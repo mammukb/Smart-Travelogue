@@ -1,0 +1,63 @@
+{%include 'adminheader.html'%}
+
+
+<center>
+    
+{%if upd%}
+<div style="border: 1px solid #ccc; margin-top:100px; border-radius: 5px; padding: 20px; width: 300px;">
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th style="text-align: left;">Notification</th>
+                <td><input type="text" name="noti" value="{{upd.notification}}" style="width: 100%;" id=""></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="submit" name="sub" value="Submit" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+{%else%}
+
+
+    <form action=""id="forr"  method="post" style="margin-top: 200px; text-align: center;">
+        <table style="border-collapse: collapse;">
+            <tr>
+                <td style="padding: 8px;"><textarea name="noti" id="" class="form-control" cols="30" placeholder="Notification...?" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 8px;"><input type="submit" value="SUBMIT" name="sub" id="" style="padding: 6px 12px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px;"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+<table class="table table-stripped" align="center" style="color: white; width:50%; margin-top:100px" border="1">
+    <tr>
+        <th>Notification</th>
+        <th>Date</th>
+        <th>#</th>
+    </tr>
+    {%for i in ss%}
+    <tr>
+        <td>{{i.notification}}</td>
+        <td>{{i.date}}</td>
+        <td><button class="btn btn-info"><a href="/admin_update_notification/{{i.noti_id}}">Update</a></button>
+       <button class="btn btn-danger"> <a href="/admin_delete_notification/{{i.noti_id}}">Delete</a></button></td>
+
+    </tr>
+    {%endfor%}
+</table>
+{%endif%}
+</center>
+{%include 'footer.html'%}
+
+<style>
+    #forr{
+        margin-left: 650px;
+    }
+</style>

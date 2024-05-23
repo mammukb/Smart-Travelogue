@@ -1,0 +1,30 @@
+{%include 'adminheader.html'%}
+
+
+<center>
+    <h1 style="margin-top:50px">USERS</h1>
+    <table class="table table-stripped" align="center" style="color: white; width:50%; margin-top:100px" border="1">
+        <tr style="background-color: white; color:black">
+            <th style="padding: 8px;">Name</th>
+            <th style="padding: 8px;">Place</th>
+            <th style="padding: 8px;">Contact</th>
+            <th style="padding: 8px;">Email</th>
+            <th style="padding: 8px;">Photo</th>
+        </tr>
+        {% for i in b %}
+        <tr>
+            <td style="padding: 8px;">{{ i.name }}</td>
+            <td style="padding: 8px;">{{ i.place }}</td>
+            <td style="padding: 8px;">{{ i.contact }}</td>
+            <td style="padding: 8px;">{{ i.email }}</td>
+            <td style="padding: 8px;"><img src="static/{{ i.photo }}" style="width: 100px; height:100px"  alt="user image"></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</center>
+
+
+
+
+{%include 'footer.html'%}

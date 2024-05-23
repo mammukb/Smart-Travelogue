@@ -1,0 +1,137 @@
+{%include 'adminheader.html'%}
+
+
+
+{%if obj%}
+
+<form action="" method="post" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <table align="center" style="width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <h2 style="color: black;">Package Update</h2>
+            </td>
+        </tr>
+        <tr>
+            <th>Facility</th>
+            <td>
+                <select required name="fac" id="facility" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                    <option value="#" disabled selected>Select Facility</option>
+                    {% for i in rev %}
+                    <option value="{{ i.facility_id }}">{{ i.f_name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="color: black;">Package Name</th>
+            <td><input type="text" name="pkname" id="pkname" placeholder="Package Name" value="{{ obj.package_name }}" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <th style="color: black;">Description</th>
+            <td><input type="text" name="description" id="description" placeholder="Description" value="{{ obj.description }}" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <th style="color: black;">Valid From</th>
+            <td><input type="text" name="valid_from" id="valid_from" placeholder="Valid from" value="{{ obj.valid_from }}" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <th style="color: black;">Valid Till</th>
+            <td><input type="text" name="valid_till" id="valid_till" placeholder="Valid till" value="{{ obj.valid_till }}" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <th style="color: black;">Price</th>
+            <td><input type="number" name="price" id="price" placeholder="Price" value="{{ obj.price }}" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; padding-top: 20px;"><input type="submit" name="update" id="update" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+
+{%else%}
+
+
+<form action="" method="post" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <table align="center" style="width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <h2 style="color: black;margin-top:50px">Package Information</h2>
+            </td>
+        </tr>
+        <tr style="color: black;margin-top:50px">
+            <th   style="text-align: left; padding-bottom: 10px;color: black;">Facility</th>
+            <td >
+                <select required name="facility" class="form-control" id="facility" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                    <option value="#">Select Facility</option>
+                    {% for i in rev %}
+                    <option value="{{ i.facility_id }}">{{ i.f_name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td  required style="color: black;"><label for="pkname">Package Name</label></td>
+            <td><input type="text" name="pkname" id="pkname" placeholder="Package Name" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td  style="color: black;"><label for="description">Description</label></td>
+            <td><input type="text" name="description" id="description"  placeholder="Description" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td  style="color: black;"><label for="valid_from">Valid From</label></td>
+            <td><input type="text" name="valid_from" id="valid_from" placeholder="Valid from"  style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td  style="color: black;"><label for="valid_till">Valid Till</label></td>
+            <td><input type="text" name="valid_till" id="valid_till" placeholder="Valid till" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td style="color: black;"><label for="price">Price</label></td>
+            <td><input type="number" name="price" placeholder="Price" id="price" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; padding-top: 20px;"><input type="submit" name="sub" id="sub" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+
+
+    <center>
+        <table class="table table-stripped" align="center" border="1" style="color: white; width:50%;">
+            <tr style="background-color: white; color:black">
+                <th>Package_name</th>
+                <th>Description</th>
+                <th>Valid_from</th>
+                <th>Vali_till</th>
+                <th>Price</th>
+                <th>Facility</th>
+                <th>#</th>
+
+    
+            </tr>
+            {%for i in ss%}
+            <tr>
+                <td>{{i.package_name}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.valid_from}}</td>
+                <td>{{i.valid_till}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.facility.f_name}}</td>
+    
+    
+                <td><a class="btn btn-info" href="/admin_update_package/{{i.package_id}}">Update</a>
+                    <a class="btn btn-danger" href="/admin_delete_package/{{i.package_id}}">Delete</a>
+                </td>
+    
+            </tr>
+            {%endfor%}
+        </table>
+    </center>
+{%endif%}
+{%include 'footer.html'%}

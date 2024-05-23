@@ -1,0 +1,259 @@
+{%include 'adminheader.html'%}
+{%if obj1%}
+
+
+
+<script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3MPnSnyWwNmpnVEFkaddVvy_GWtxSejs&sensor=false"></script>
+<script type="text/javascript">
+    // window.onload = function () {
+    function myFunction() {
+        var mapOptions = {
+            center: new google.maps.LatLng(9.9763482, 76.286272),
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var infoWindow = new google.maps.InfoWindow();
+        var latlngbounds = new google.maps.LatLngBounds();
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        google.maps.event.addListener(map, 'click', function (e) {
+            alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());
+            document.getElementById('slati').value = e.latLng.lat();
+            document.getElementById('elongi').value = e.latLng.lng();
+
+
+        });
+    }
+
+</script>
+
+
+
+<form action="" method="post" enctype="multipart/form-data"  style=" padding: 15px;  display: flex; justify-content: center; align-items: center; height: 100vh;" >
+    <table  style=" margin-left: 50px;   color: black;  width: 600px; padding: 100px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);" >
+        <tr>
+            <th>Type</th>
+            <td><input type="text" name="type" value="{{obj1.type}}" id=""></td>
+        </tr>
+        <tr>
+            <th>Facility_Name</th>
+            <td><input type="text" value="{{obj1.f_name}}" name="name" id=""></td>
+        </tr>
+        <tr>
+            <th>Place</th>
+            <td><input type="text" value="{{obj1.f_place}}" name="place" id=""></td>
+        </tr>
+        <tr>
+            <th>LATITUDE</th>
+            <td style="color: black;">
+                <input type="text"  value="{{obj1.lati}}" name="lati" id="slati" class="form-control">
+            </td>
+            <td><a onclick="myFunction()" required>View Map</a></td>
+        </tr>
+        <tr>
+            <th>LONGITUDE</th>
+            <td style="color: black;">
+                <input type="text" name="longi" value="{{obj1.longi}}" id="elongi" required class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td><input type="text" name="city" value="{{obj1.city}}" id=""></td>
+        </tr>
+        <tr>
+            <th>State</th>
+            <td><input type="text" value="{{obj1.state}}" name="state"></td>
+        </tr>
+        <tr>
+            <th>Contact</th>
+            <td><input type="number" value="{{obj1.phone}}" pattern="[0-9]{10}" maxlength="10" title="enter valid phonenumebr" name="phone"
+                    id=""></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="email" name="email" value="{{obj1.email}}" id=""></td>
+        </tr>
+        <tr>
+            <th>Photo</th>
+            <td> <input type="file" name="img1" id="imgInput" onchange="previewImage()" required> </td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; padding-top: 20px;"><input type="submit"  class="btn btn-info"  value="UPDATE" name="update" id=""></td>
+        </tr>
+    </table>
+    <div class="col6" style="margin-left: 500px; margin-top:-200px">
+        <table>
+            <tr>
+               
+            </tr>
+        </table>
+    </div>
+   
+</form>
+
+
+
+
+<script>
+    function previewImage() {
+        var input = document.getElementById('imgInput');
+        var preview = document.getElementById('imgPreview');
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+{%else%}
+<script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3MPnSnyWwNmpnVEFkaddVvy_GWtxSejs&sensor=false"></script>
+<script type="text/javascript">
+    // window.onload = function () {
+    function myFunction() {
+        var mapOptions = {
+            center: new google.maps.LatLng(9.9763482, 76.286272),
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var infoWindow = new google.maps.InfoWindow();
+        var latlngbounds = new google.maps.LatLngBounds();
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        google.maps.event.addListener(map, 'click', function (e) {
+            alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());
+            document.getElementById('slati').value = e.latLng.lat();
+            document.getElementById('elongi').value = e.latLng.lng();
+
+
+        });
+    }
+
+</script>
+
+
+<center>
+    <h1>MANAGE FACILITY !</h1>
+
+</center>
+<div class="container">
+    <div class="col6">
+        <form action="" method="post" enctype="multipart/form-data"   style=" padding: 15px;  display: flex; justify-content: center; align-items: center; height: 100vh;"  >
+            <table  style=" margin-left: 50px;   color: black;  width: 600px; padding: 100px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"  >
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <h2 style="color: black;margin-top:50px">Facility Information</h2>
+                    </td>
+                </tr>
+                <td>
+                    <div id="dvMap" style="width: 300px; height: 100px;"></div>
+                </td>
+               
+               
+                <tr >
+                    <th>Type</th>
+                    <td><input type="text" name="type" id=""></td>
+                </tr>
+                <tr>
+                    <th>Facility_Name</th>
+                    <td><input type="text" name="name" id=""></td>
+                </tr>
+                <tr>
+                    <th>Place</th>
+                    <td><input type="text" name="place" id=""></td>
+                </tr>
+                <tr>
+                    <th>LATITUDE</th>
+                    <td style="color: black;">
+                        <input type="text" name="lati" id="slati" class="form-control">
+                    </td>
+                    <td><a onclick="myFunction()" required>View Map</a></td>
+                </tr>
+                <tr>
+                    <th>LONGITUDE</th>
+                    <td style="color: black;">
+                        <input type="text" name="longi" id="elongi" required class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td><input type="text" name="city" id=""></td>
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td><input type="text" name="state"></td>
+                </tr>
+                <tr>
+                    <th>Contact</th>
+                    <td><input type="number" pattern="[0-9]{10}" maxlength="10" title="enter valid phonenumebr"
+                            name="phone" id=""></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" name="email" id=""></td>
+                </tr>
+                <tr>
+                    <th>Photo</th>
+                    <td><input type="file" name="img1" id=""></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 20px;"><input type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"  value="REGISTER" name="submit" id=""></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="col6" style="margin-left: 500px; margin-top:-300px">
+        <table>
+            <tr>
+                <td>
+                    <div id="dvMap" style="width: 300px; height: 300px;"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<table class="table table-stripped" align="center" style="color: white; width:50%; margin-top:100px;  margin-left:100px " border="1">
+    <tr>
+        <th>Type</th>
+        <th>Facility</th>
+        <th>Places</th>
+        <th>Lati</th>
+        <th>Longi</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Gallery</th>
+        <th></th>
+    </tr>
+    {%for i in obj%}
+    <tr>
+        <td>{{i.type}}</td>
+        <td>{{i.f_name}}</td>
+        <td>{{i.f_place}}</td>
+        <td>{{i.lati}}</td>
+        <td>{{i.longi}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.state}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.email}}</td>
+        <td><img src="static/{{i.photo}}" height="200px" width="200px"  style="width: 100px; height:100px"  ></td>
+        <td><a class="btn btn-info" href="/admin_update_facility/{{i.facility_id}}">Update</a>
+            <a class="btn btn-danger" href="/admin_delete_facility/{{i.facility_id}}">Delete</a>
+        </td>
+    </tr>
+    {%endfor%}
+</table>
+{%endif%}
+
+{%include 'footer.html'%}

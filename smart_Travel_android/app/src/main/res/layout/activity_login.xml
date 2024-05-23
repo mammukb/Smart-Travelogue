@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/logi"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="LOGIN PAGE"
+        android:textSize="40sp"
+        android:textColor="#002C3E50"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tg"
+                style="@style/CustomTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="#3F60A0"
+                android:hint="Enter Username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextText5"
+                    android:ems="10"
+                    android:textColorHint="#3F60A0"
+                    android:textColor="#3F60A0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tt"
+                style="@style/CustomTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:textColorHint="#3F60A0"
+                android:hint="Enter Password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTextPassword2"
+                    android:ems="10"
+                    android:textColorHint="#3F60A0"
+                    android:textColor="#3F60A0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button4"
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="serif-monospace"
+                android:text="LOGIN"
+                android:textColor="#14A7AC" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_marginTop="9dp"
+                android:layout_width="match_parent"
+                android:fontFamily="serif-monospace"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Don't have an anccount ? Register Now!" />
+
+
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

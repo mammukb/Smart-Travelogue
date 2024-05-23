@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Smart_travelogue"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".send_feedback"
+            android:exported="false" />
+        <activity
+            android:name=".visisble_media"
+            android:exported="false" />
+        <activity
+            android:name=".custom_view_media"
+            android:exported="false" />
+        <activity
+            android:name=".view_media"
+            android:exported="false" />
+        <activity
+            android:name=".Add_place"
+            android:exported="false" />
+
+        <service
+            android:name=".Locationservice"
+            android:exported="true" />
+
+        <activity
+            android:name=".view_others_custom_traveloge"
+            android:exported="false" />
+        <activity
+            android:name=".view_others_traveloge"
+            android:exported="false" />
+        <activity
+            android:name=".Cust_service"
+            android:exported="false" />
+        <activity
+            android:name=".View_services"
+            android:exported="false" />
+        <activity
+            android:name=".Custome_Travelogue"
+            android:exported="false" />
+        <activity
+            android:name=".View_travelogue"
+            android:exported="false" />
+        <activity
+            android:name=".Manage_travelogue"
+            android:exported="false" />
+        <activity
+            android:name=".Custome_nearby_place"
+            android:exported="false" />
+        <activity
+            android:name=".View_near_by_places"
+            android:exported="false" />
+        <activity
+            android:name=".Custome_Nearby"
+            android:exported="false" />
+        <activity
+            android:name=".Near_by_facilities"
+            android:exported="false" />
+        <activity
+            android:name=".View_Packages"
+            android:exported="false" />
+        <activity
+            android:name=".View_notification"
+            android:exported="false" />
+        <activity
+            android:name=".Send_review"
+            android:exported="false" />
+        <activity
+            android:name=".Manage_audio_video"
+            android:exported="false" />
+        <activity
+            android:name=".Customize_places"
+            android:exported="false" />
+        <activity
+            android:name=".User_registration"
+            android:exported="false" />
+        <activity
+            android:name=".View_places"
+            android:exported="false" />
+        <activity
+            android:name=".User_home"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".IPSetting"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".LocationService" />
+    </application>
+
+</manifest>
